@@ -7,7 +7,6 @@ import AddFoto from "../../Assets/adicionar.svg?react";
 import Sair from "../../Assets/sair.svg?react";
 import styles from "./UserHeaderNav.module.css";
 import useMedia from "../../Hooks/useMedia";
-import useOutsideClick from "../../Hooks/useOutsideClick";
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
