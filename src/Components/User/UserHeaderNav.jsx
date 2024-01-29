@@ -7,23 +7,38 @@ import AddFoto from "../../Assets/adicionar.svg?react";
 import Sair from "../../Assets/sair.svg?react";
 import styles from "./UserHeaderNav.module.css";
 import useMedia from "../../Hooks/useMedia";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
   const navigate = useNavigate();
-
   const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = React.useState(false);
-
   const { pathname } = useLocation();
-  React.useEffect(() => {
-    setMobileMenu(false);
-  }, [pathname]);
+  const menuRef = React.useRef(null);
 
   function handleLogout() {
     userLogout();
     navigate("/login");
   }
+
+  React.useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMobileMenu(false);
+      }
+    };
+    if (mobileMenu) {
+      document.addEventListener("click", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [mobileMenu]);
 
   return (
     <>
@@ -33,11 +48,15 @@ const UserHeaderNav = () => {
           className={`${styles.mobileButton} ${
             mobileMenu && styles.mobileButtonActive
           }`}
-          onClick={() => setMobileMenu(!mobileMenu)}
+          onClick={(event) => {
+            event.stopPropagation();
+            setMobileMenu(!mobileMenu);
+          }}
         ></button>
       )}
 
       <nav
+        ref={menuRef}
         className={`${mobile ? styles.navMobile : styles.nav} ${
           mobileMenu && styles.navMobileActive
         }`}

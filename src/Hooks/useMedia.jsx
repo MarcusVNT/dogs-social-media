@@ -15,7 +15,7 @@ const useMedia = (media) => {
     };
   }, [media]);
 
-  return media;
+  return match;
 };
 
 export default useMedia;
