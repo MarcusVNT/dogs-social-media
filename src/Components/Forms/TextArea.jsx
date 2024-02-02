@@ -12,14 +12,11 @@ const TextArea = ({
   name,
 }) => {
   return (
-    <div>
-      <label htmlFor={id} className={styles.label}>
-        {label}
-      </label>
+    <div className={styles.container}>
       <textarea
+        className={styles.textarea}
         id={id}
         name={name}
-        className={styles.textarea}
         value={value}
         onChange={onChange}
         rows={rows}

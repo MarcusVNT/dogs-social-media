@@ -31,7 +31,7 @@
   padding: 0 2rem;
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 64rem) {
   .photo {
     height: auto;
     max-height: calc(100vh - 4rem);

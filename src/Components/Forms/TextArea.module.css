@@ -1,0 +1,28 @@
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+} */
+
+.textarea {
+  display: block;
+  max-width: 100%;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  resize: none;
+  border: 1px solid #eee;
+  /* margin: 0.5rem 1rem 0.5rem 1rem; */
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background: #eee;
+  transition: 0.3s;
+}
+.textarea:focus,
+.textarea:hover {
+  outline: none;
+  border-color: #fb1;
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+}

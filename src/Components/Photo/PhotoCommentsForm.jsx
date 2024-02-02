@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./PhotoCommentsForm.module.css";
 import TextArea from "../Forms/TextArea";
 import CommentButton from "../Forms/CommentButton";
 import useFetch from "../../Hooks/useFetch";
@@ -24,12 +25,13 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <TextArea
         label="Faça um comentário:"
         id="comment"
         name="comment"
         value={comment}
+        placeholder={"Faça um comentário..."}
         onChange={({ target }) => setComment(target.value)}
       />
       <CommentButton />

@@ -4,7 +4,7 @@ import Enviar from "../../Assets/enviar.svg?react";
 
 const CommentButton = ({ ...props }) => {
   return (
-    <button {...props} className={styles.commentButton}>
+    <button {...props} className={styles.button}>
       <Enviar />
     </button>
   );
