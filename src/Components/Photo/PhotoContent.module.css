@@ -49,8 +49,9 @@
   .photo {
     height: auto;
     max-height: calc(100vh - 4rem);
-    overflow-y: auto;
+    overflow-y: visible;
     grid-template-columns: minmax(20rem, 40rem);
+    grid-template-rows: repeat(3, auto);
   }
   .img {
     grid-row: 1;

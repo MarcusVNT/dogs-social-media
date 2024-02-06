@@ -1,6 +1,7 @@
 .form {
   display: flex;
   align-items: stretch;
+  justify-self: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
   width: auto;

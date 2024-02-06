@@ -25,23 +25,25 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
     }
   }
   return (
-    <form
-      className={`${styles.form} ${single ? styles.single : ""}`}
-      onSubmit={handleSubmit}
-    >
-      <TextArea
-        label="Faça um comentário:"
-        id="comment"
-        name="comment"
-        value={comment}
-        placeholder={"Faça um comentário..."}
-        onChange={({ target }) => setComment(target.value)}
-        rows="3"
-        spellcheck={true}
-      />
-      <CommentButton />
+    <section>
+      <form
+        className={`${styles.form} ${single ? styles.single : ""}`}
+        onSubmit={handleSubmit}
+      >
+        <TextArea
+          label="Faça um comentário:"
+          id="comment"
+          name="comment"
+          value={comment}
+          placeholder={"Faça um comentário..."}
+          onChange={({ target }) => setComment(target.value)}
+          rows="3"
+          spellcheck={true}
+        />
+        <CommentButton />
+      </form>
       <Error error={error} />
-    </form>
+    </section>
   );
 };
 
