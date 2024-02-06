@@ -26,6 +26,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
   }
   return (
     <section>
+      <Error error={error} />
       <form
         className={`${styles.form} ${single ? styles.single : ""}`}
         onSubmit={handleSubmit}
@@ -42,7 +43,6 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
         />
         <CommentButton />
       </form>
-      <Error error={error} />
     </section>
   );
 };
