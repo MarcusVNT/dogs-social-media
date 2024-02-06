@@ -10,6 +10,7 @@ const TextArea = ({
   placeholder,
   id,
   name,
+  spellcheck,
 }) => {
   return (
     <div className={styles.container}>
@@ -21,6 +22,7 @@ const TextArea = ({
         onChange={onChange}
         rows={rows}
         placeholder={placeholder}
+        spellCheck={spellcheck}
       />
       {error && <p className={styles.error}>{error}</p>}
     </div>

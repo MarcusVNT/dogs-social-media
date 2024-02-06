@@ -3,7 +3,7 @@
   align-items: stretch;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  width: 100%;
+  width: auto;
   margin: 1rem;
 }
 .single.form {

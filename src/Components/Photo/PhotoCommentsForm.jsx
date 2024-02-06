@@ -36,6 +36,8 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
         value={comment}
         placeholder={"Faça um comentário..."}
         onChange={({ target }) => setComment(target.value)}
+        rows="3"
+        spellcheck={true}
       />
       <CommentButton />
       <Error error={error} />
