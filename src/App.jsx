@@ -9,6 +9,7 @@ import Footer from "./Components/footer";
 import { UserStorage } from "./UserContext";
 import ProtectedRouter from "./Components/Helper/ProtectedRouter";
 import User from "./Components/User/User";
+import UserProfile from "./Components/User/UserProfile";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
             <Route path="*" element={<h1>Not Found 404</h1>} />
           </Routes>
           <Footer />
