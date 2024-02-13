@@ -17,13 +17,16 @@ const PhotoComments = (props) => {
         ref={commentsSection}
         className={`${styles.comments} ${props.single ? styles.single : ""}`}
       >
-        {comments.map((comment) => (
-          <li key={comment.comment_ID}>
-            <b>{comment.comment_author}: </b>
-            <span>{comment.comment_content}</span>
-          </li>
-        ))}
+        <div className={styles.listComment}>
+          {comments.map((comment) => (
+            <li key={comment.comment_ID}>
+              <b>{comment.comment_author}: </b>
+              <span>{comment.comment_content}</span>
+            </li>
+          ))}
+        </div>
       </ul>
+
       {login && (
         <PhotoCommentsForm
           single={props.single}

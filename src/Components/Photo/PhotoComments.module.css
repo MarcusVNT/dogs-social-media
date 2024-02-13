@@ -1,3 +1,9 @@
+.listComment {
+  height: 250px;
+  overflow-y: visible;
+  word-break: break-word;
+}
+
 .comments {
   overflow-y: auto;
   word-break: break-word;
