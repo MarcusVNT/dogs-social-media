@@ -6,6 +6,7 @@ import FormSignUp from "./FormSignUp";
 import FormPasswordLost from "./FormPasswordLost";
 import FormPasswordReset from "./FormPasswordReset";
 import { UserContext } from "../../UserContext";
+import NotFound from "../NotFound";
 
 const Login = () => {
   const { login } = React.useContext(UserContext);

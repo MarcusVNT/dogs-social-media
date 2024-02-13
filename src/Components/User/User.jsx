@@ -5,6 +5,7 @@ import Feed from "../Feed/Feed";
 import UserPhotoPost from "./UserPhotoPost";
 import UserStats from "./UserStats";
 import { UserContext } from "../../UserContext";
+import NotFound from "../NotFound";
 
 const User = () => {
   const { data } = React.useContext(UserContext);
