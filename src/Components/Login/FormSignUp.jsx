@@ -6,6 +6,7 @@ import useForm from "../../Hooks/useForm";
 import { USER_POST } from "../../Api";
 import { UserContext } from "../../UserContext";
 import useFetch from "../../Hooks/useFetch";
+import Head from "../Helper/Head";
 
 const FormSignUp = () => {
   const username = useForm();
@@ -29,6 +30,7 @@ const FormSignUp = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Casdastre-se" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
