@@ -136,3 +136,29 @@ export function PASSWORD_RESET(body) {
     },
   };
 }
+
+export function GET_STATS(token) {
+  return {
+    url: API_URL + "/api/stats",
+    options: {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    },
+  };
+}
+
+// export function GET_STATS() {
+//   return {
+//     url: API_URL + "/api/stats",
+//     options: {
+//       method: "GET",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: "Bearer " + window.localStorage.getItem("token"),
+//       },
+//     },
+//   };
+// }
