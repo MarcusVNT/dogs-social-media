@@ -27,13 +27,7 @@ const UserStatsGraphs = ({ data }) => {
       </div>
       <div className={styles.graphItem}>
         <VictoryPie
-          data={[
-            { x: "afsgyfg", y: 2 },
-            { x: "bjsdjs", y: 3 },
-            { x: "cjnsjdns", y: 5 },
-            { x: "dsjdfns", y: 7 },
-            { x: "edjfnsjd", y: 10 },
-          ]}
+          data={graph}
           innerRadius={50}
           padding={{ top: 20, bottom: 20, left: 80, right: 80 }}
           style={{
@@ -51,17 +45,7 @@ const UserStatsGraphs = ({ data }) => {
       </div>
       <div className={styles.graphItem}>
         <VictoryChart>
-          <VictoryBar
-            alignment="start"
-            barWidth={30}
-            data={[
-              { x: "afsgyfg", y: 2 },
-              { x: "bjsdjs", y: 3 },
-              { x: "cjnsjdns", y: 5 },
-              { x: "dsjdfns", y: 7 },
-              { x: "edjfnsjd", y: 10 },
-            ]}
-          />
+          <VictoryBar alignment="start" barWidth={30} data={graph} />
         </VictoryChart>
       </div>
     </section>
