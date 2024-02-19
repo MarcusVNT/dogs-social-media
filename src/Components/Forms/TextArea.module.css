@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  /* width: 100%; */
 }
 
 .textarea {
@@ -13,7 +12,6 @@
   font-family: var(--type-first);
   resize: none;
   border: 1px solid #eee;
-  /* margin: 0.5rem 1rem 0.5rem 1rem; */
   padding: 0.5rem;
   border-radius: 0.2rem;
   background: #eee;
